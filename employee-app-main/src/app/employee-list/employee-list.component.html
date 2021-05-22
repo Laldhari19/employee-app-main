@@ -1,4 +1,4 @@
-<div class="page-header"><h2 class="text-center">Employees Details</h2></div>
+<div class="page-header"><h2 class="text-center">All Employees Details</h2></div>
 
 <div class="row" >
   <div class="card col-3" *ngFor="let employee of employeeList | angularPaginator: { id: 'ANGULAR_PAGINATOR_DEFAULT',
@@ -6,7 +6,8 @@
     <img  *ngIf="employee.gender==='Male'" src="https://www.w3schools.com/howto/img_avatar.png" class="card-img-top responsive" alt="Avatar" >
     <img  *ngIf="employee.gender==='Female'" src="https://www.w3schools.com/howto/img_avatar2.png" class="card-img-top responsive" alt="Avatar" >
     <div class="card-body">
-      <h5 class="card-title">{{employee.name}} | {{employee.gender}} </h5>
+      <h5 class="card-title">{{employee.name}}</h5>
+      <p class="card-text">Gender : {{employee.gender}}</p>
       <p class="card-text">Department : {{employee.department}}</p>
       <p class="card-text">Date of Birth : {{employee.dateOfBirth}}</p>
     </div>
